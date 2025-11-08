@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CHOOSE YOUR GOAT </title>
+    <link rel="stylesheet" href="reja.css">
+</head>
+<body
+    style="
+    background-image: url(back.jpeg)
+    "
+    class="flex justify-center h-screen items-center"
+>
+    <div class="wrapper">  
+        <div class="photo left" id="photoLeft">
+            <img src="cis.jpg" alt="Foto Kiri">
+            <div class="text">
+                <h2> INI LianzzZuzuZu</h2>
+                <p> LianzzZuzuZu’s gameplay shows true dedication and a deep understanding of Free Fire. </p>
+            </div>
+        </div>
+        <div class="photo right" id="photoRight">
+            <img src="blek.jpg" alt="Foto Kanan">
+            <div class="text">
+                <h2> INI JarheadzzZazaZa </h2>
+                <p> JarheadzzZazaZa shows remarkable skill and consistency in every Mobile Legends match. </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const left = document.getElementById('photoLeft')
+        const right = document.getElementById('photoRight')
+
+        function resetPhotos() {
+            left.classList.remove('active','hidden');
+            right.classList.remove('active','hidden');
+        }
+        
+        left.addEventListener('click',() => {
+            if (left.classList.contains('active')) {
+                resetPhotos();
+            } else {
+                left.classList.add('active');
+                right.classList.add('hidden');
+            }
+        });
+        right.addEventListener('click',() => {
+            if (right.classList.contains('active')) {
+                resetPhotos();
+            } else {
+                right.classList.add('active');
+                left.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
